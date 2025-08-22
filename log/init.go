@@ -1,12 +1,11 @@
 package log
 
 import (
-	"github.com/sirupsen/logrus"
 	"io"
 	"os"
-	"time"
+
+	"github.com/sirupsen/logrus"
 )
-import "github.com/panjf2000/ants/v2"
 
 func init() {
 	InitLog()
@@ -31,7 +30,4 @@ func InitLog() {
 		fileAndStdoutWriter := io.MultiWriter(writers...)
 		logrus.SetOutput(fileAndStdoutWriter)
 	}()
-	Logger = &Wrapper{logrus.WithFields(logrus.Fields{})}
-	ants.WithLogger(Logger)
-	ants.WithExpiryDuration(time.Second * 10)
 }
