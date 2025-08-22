@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package proto;
+option go_package = "proto/game";
+
+import "proto/third_party/options.proto";
+
+message RoleInfoRequest{
+}
+
+message RoleInfoResponse{
+  string name = 1;
+}
+
+service GameService {
+  rpc RoleInfo(RoleInfoRequest) returns (RoleInfoResponse) {
+    option (gateway.options.code) = 10001;
+  }
+}

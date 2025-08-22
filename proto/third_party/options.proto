@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package gateway.options;
+option go_package = "proto/options";
+
+import "google/protobuf/descriptor.proto";
+
+// 在方法上标注入站/出站的 code
+extend google.protobuf.MethodOptions {
+  // 客户端 -> 网关 -> 服务 的入站 code（必填）
+  uint32 code = 50001;
+
+  // 服务 -> 网关 -> 客户端 的回包 code（可选；不填则默认用同一个 code）
+  uint32 resp_code = 50002;
+}
