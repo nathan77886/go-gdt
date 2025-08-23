@@ -2,9 +2,9 @@
 // versions:
 // 	protoc-gen-go v1.36.6
 // 	protoc        (unknown)
-// source: proto/third_party/options.proto
+// source: proto/v1/options.proto
 
-package options
+package v1
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -21,22 +21,22 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
-var file_proto_third_party_options_proto_extTypes = []protoimpl.ExtensionInfo{
+var file_proto_v1_options_proto_extTypes = []protoimpl.ExtensionInfo{
 	{
 		ExtendedType:  (*descriptorpb.MethodOptions)(nil),
 		ExtensionType: (*uint32)(nil),
 		Field:         50001,
-		Name:          "gateway.options.code",
+		Name:          "v1.code",
 		Tag:           "varint,50001,opt,name=code",
-		Filename:      "proto/third_party/options.proto",
+		Filename:      "proto/v1/options.proto",
 	},
 	{
 		ExtendedType:  (*descriptorpb.MethodOptions)(nil),
 		ExtensionType: (*uint32)(nil),
 		Field:         50002,
-		Name:          "gateway.options.resp_code",
+		Name:          "v1.resp_code",
 		Tag:           "varint,50002,opt,name=resp_code",
-		Filename:      "proto/third_party/options.proto",
+		Filename:      "proto/v1/options.proto",
 	},
 }
 
@@ -45,27 +45,28 @@ var (
 	// 客户端 -> 网关 -> 服务 的入站 code（必填）
 	//
 	// optional uint32 code = 50001;
-	E_Code = &file_proto_third_party_options_proto_extTypes[0]
+	E_Code = &file_proto_v1_options_proto_extTypes[0]
 	// 服务 -> 网关 -> 客户端 的回包 code（可选；不填则默认用同一个 code）
 	//
 	// optional uint32 resp_code = 50002;
-	E_RespCode = &file_proto_third_party_options_proto_extTypes[1]
+	E_RespCode = &file_proto_v1_options_proto_extTypes[1]
 )
 
-var File_proto_third_party_options_proto protoreflect.FileDescriptor
+var File_proto_v1_options_proto protoreflect.FileDescriptor
 
-const file_proto_third_party_options_proto_rawDesc = "" +
+const file_proto_v1_options_proto_rawDesc = "" +
 	"\n" +
-	"\x1fproto/third_party/options.proto\x12\x0fgateway.options\x1a google/protobuf/descriptor.proto:4\n" +
+	"\x16proto/v1/options.proto\x12\x02v1\x1a google/protobuf/descriptor.proto:4\n" +
 	"\x04code\x12\x1e.google.protobuf.MethodOptions\x18ц\x03 \x01(\rR\x04code:=\n" +
-	"\tresp_code\x12\x1e.google.protobuf.MethodOptions\x18҆\x03 \x01(\rR\brespCodeB\x0fZ\rproto/optionsb\x06proto3"
+	"\tresp_code\x12\x1e.google.protobuf.MethodOptions\x18҆\x03 \x01(\rR\brespCodeB\n" +
+	"Z\bproto/v1b\x06proto3"
 
-var file_proto_third_party_options_proto_goTypes = []any{
+var file_proto_v1_options_proto_goTypes = []any{
 	(*descriptorpb.MethodOptions)(nil), // 0: google.protobuf.MethodOptions
 }
-var file_proto_third_party_options_proto_depIdxs = []int32{
-	0, // 0: gateway.options.code:extendee -> google.protobuf.MethodOptions
-	0, // 1: gateway.options.resp_code:extendee -> google.protobuf.MethodOptions
+var file_proto_v1_options_proto_depIdxs = []int32{
+	0, // 0: v1.code:extendee -> google.protobuf.MethodOptions
+	0, // 1: v1.resp_code:extendee -> google.protobuf.MethodOptions
 	2, // [2:2] is the sub-list for method output_type
 	2, // [2:2] is the sub-list for method input_type
 	2, // [2:2] is the sub-list for extension type_name
@@ -73,26 +74,26 @@ var file_proto_third_party_options_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for field type_name
 }
 
-func init() { file_proto_third_party_options_proto_init() }
-func file_proto_third_party_options_proto_init() {
-	if File_proto_third_party_options_proto != nil {
+func init() { file_proto_v1_options_proto_init() }
+func file_proto_v1_options_proto_init() {
+	if File_proto_v1_options_proto != nil {
 		return
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: unsafe.Slice(unsafe.StringData(file_proto_third_party_options_proto_rawDesc), len(file_proto_third_party_options_proto_rawDesc)),
+			RawDescriptor: unsafe.Slice(unsafe.StringData(file_proto_v1_options_proto_rawDesc), len(file_proto_v1_options_proto_rawDesc)),
 			NumEnums:      0,
 			NumMessages:   0,
 			NumExtensions: 2,
 			NumServices:   0,
 		},
-		GoTypes:           file_proto_third_party_options_proto_goTypes,
-		DependencyIndexes: file_proto_third_party_options_proto_depIdxs,
-		ExtensionInfos:    file_proto_third_party_options_proto_extTypes,
+		GoTypes:           file_proto_v1_options_proto_goTypes,
+		DependencyIndexes: file_proto_v1_options_proto_depIdxs,
+		ExtensionInfos:    file_proto_v1_options_proto_extTypes,
 	}.Build()
-	File_proto_third_party_options_proto = out.File
-	file_proto_third_party_options_proto_goTypes = nil
-	file_proto_third_party_options_proto_depIdxs = nil
+	File_proto_v1_options_proto = out.File
+	file_proto_v1_options_proto_goTypes = nil
+	file_proto_v1_options_proto_depIdxs = nil
 }

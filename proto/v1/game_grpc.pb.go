@@ -2,9 +2,9 @@
 // versions:
 // - protoc-gen-go-grpc v1.5.1
 // - protoc             (unknown)
-// source: proto/game.proto
+// source: proto/v1/game.proto
 
-package game
+package v1
 
 import (
 	context "context"
@@ -19,7 +19,7 @@ import (
 const _ = grpc.SupportPackageIsVersion9
 
 const (
-	GameService_RoleInfo_FullMethodName = "/proto.GameService/RoleInfo"
+	GameService_RoleInfo_FullMethodName = "/v1.GameService/RoleInfo"
 )
 
 // GameServiceClient is the client API for GameService service.
@@ -108,7 +108,7 @@ func _GameService_RoleInfo_Handler(srv interface{}, ctx context.Context, dec fun
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var GameService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "proto.GameService",
+	ServiceName: "v1.GameService",
 	HandlerType: (*GameServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -117,5 +117,5 @@ var GameService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "proto/game.proto",
+	Metadata: "proto/v1/game.proto",
 }

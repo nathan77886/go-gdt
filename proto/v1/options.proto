@@ -1,7 +1,7 @@
 syntax = "proto3";
 
-package gateway.options;
-option go_package = "proto/options";
+package v1;
+option go_package = "proto/v1";
 
 import "google/protobuf/descriptor.proto";
 

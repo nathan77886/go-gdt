@@ -1,9 +1,9 @@
 syntax = "proto3";
 
-package proto;
-option go_package = "proto/game";
+package v1;
+option go_package = "proto/v1";
 
-import "proto/third_party/options.proto";
+import "proto/v1/options.proto";
 
 message RoleInfoRequest{
 }
@@ -14,6 +14,6 @@ message RoleInfoResponse{
 
 service GameService {
   rpc RoleInfo(RoleInfoRequest) returns (RoleInfoResponse) {
-    option (gateway.options.code) = 10001;
+    option (code) = 10001;
   }
 }

@@ -2,14 +2,13 @@
 // versions:
 // 	protoc-gen-go v1.36.6
 // 	protoc        (unknown)
-// source: proto/game.proto
+// source: proto/v1/game.proto
 
-package game
+package v1
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
-	_ "proto/options"
 	reflect "reflect"
 	sync "sync"
 	unsafe "unsafe"
@@ -30,7 +29,7 @@ type RoleInfoRequest struct {
 
 func (x *RoleInfoRequest) Reset() {
 	*x = RoleInfoRequest{}
-	mi := &file_proto_game_proto_msgTypes[0]
+	mi := &file_proto_v1_game_proto_msgTypes[0]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -42,7 +41,7 @@ func (x *RoleInfoRequest) String() string {
 func (*RoleInfoRequest) ProtoMessage() {}
 
 func (x *RoleInfoRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_game_proto_msgTypes[0]
+	mi := &file_proto_v1_game_proto_msgTypes[0]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -55,7 +54,7 @@ func (x *RoleInfoRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RoleInfoRequest.ProtoReflect.Descriptor instead.
 func (*RoleInfoRequest) Descriptor() ([]byte, []int) {
-	return file_proto_game_proto_rawDescGZIP(), []int{0}
+	return file_proto_v1_game_proto_rawDescGZIP(), []int{0}
 }
 
 type RoleInfoResponse struct {
@@ -67,7 +66,7 @@ type RoleInfoResponse struct {
 
 func (x *RoleInfoResponse) Reset() {
 	*x = RoleInfoResponse{}
-	mi := &file_proto_game_proto_msgTypes[1]
+	mi := &file_proto_v1_game_proto_msgTypes[1]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -79,7 +78,7 @@ func (x *RoleInfoResponse) String() string {
 func (*RoleInfoResponse) ProtoMessage() {}
 
 func (x *RoleInfoResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_game_proto_msgTypes[1]
+	mi := &file_proto_v1_game_proto_msgTypes[1]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -92,7 +91,7 @@ func (x *RoleInfoResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RoleInfoResponse.ProtoReflect.Descriptor instead.
 func (*RoleInfoResponse) Descriptor() ([]byte, []int) {
-	return file_proto_game_proto_rawDescGZIP(), []int{1}
+	return file_proto_v1_game_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *RoleInfoResponse) GetName() string {
@@ -102,38 +101,38 @@ func (x *RoleInfoResponse) GetName() string {
 	return ""
 }
 
-var File_proto_game_proto protoreflect.FileDescriptor
+var File_proto_v1_game_proto protoreflect.FileDescriptor
 
-const file_proto_game_proto_rawDesc = "" +
+const file_proto_v1_game_proto_rawDesc = "" +
 	"\n" +
-	"\x10proto/game.proto\x12\x05proto\x1a\x1fproto/third_party/options.proto\"\x11\n" +
+	"\x13proto/v1/game.proto\x12\x02v1\x1a\x16proto/v1/options.proto\"\x11\n" +
 	"\x0fRoleInfoRequest\"&\n" +
 	"\x10RoleInfoResponse\x12\x12\n" +
-	"\x04name\x18\x01 \x01(\tR\x04name2Q\n" +
-	"\vGameService\x12B\n" +
-	"\bRoleInfo\x12\x16.proto.RoleInfoRequest\x1a\x17.proto.RoleInfoResponse\"\x05\x88\xb5\x18\x91NB\fZ\n" +
-	"proto/gameb\x06proto3"
+	"\x04name\x18\x01 \x01(\tR\x04name2K\n" +
+	"\vGameService\x12<\n" +
+	"\bRoleInfo\x12\x13.v1.RoleInfoRequest\x1a\x14.v1.RoleInfoResponse\"\x05\x88\xb5\x18\x91NB\n" +
+	"Z\bproto/v1b\x06proto3"
 
 var (
-	file_proto_game_proto_rawDescOnce sync.Once
-	file_proto_game_proto_rawDescData []byte
+	file_proto_v1_game_proto_rawDescOnce sync.Once
+	file_proto_v1_game_proto_rawDescData []byte
 )
 
-func file_proto_game_proto_rawDescGZIP() []byte {
-	file_proto_game_proto_rawDescOnce.Do(func() {
-		file_proto_game_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_proto_game_proto_rawDesc), len(file_proto_game_proto_rawDesc)))
+func file_proto_v1_game_proto_rawDescGZIP() []byte {
+	file_proto_v1_game_proto_rawDescOnce.Do(func() {
+		file_proto_v1_game_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_proto_v1_game_proto_rawDesc), len(file_proto_v1_game_proto_rawDesc)))
 	})
-	return file_proto_game_proto_rawDescData
+	return file_proto_v1_game_proto_rawDescData
 }
 
-var file_proto_game_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
-var file_proto_game_proto_goTypes = []any{
-	(*RoleInfoRequest)(nil),  // 0: proto.RoleInfoRequest
-	(*RoleInfoResponse)(nil), // 1: proto.RoleInfoResponse
+var file_proto_v1_game_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
+var file_proto_v1_game_proto_goTypes = []any{
+	(*RoleInfoRequest)(nil),  // 0: v1.RoleInfoRequest
+	(*RoleInfoResponse)(nil), // 1: v1.RoleInfoResponse
 }
-var file_proto_game_proto_depIdxs = []int32{
-	0, // 0: proto.GameService.RoleInfo:input_type -> proto.RoleInfoRequest
-	1, // 1: proto.GameService.RoleInfo:output_type -> proto.RoleInfoResponse
+var file_proto_v1_game_proto_depIdxs = []int32{
+	0, // 0: v1.GameService.RoleInfo:input_type -> v1.RoleInfoRequest
+	1, // 1: v1.GameService.RoleInfo:output_type -> v1.RoleInfoResponse
 	1, // [1:2] is the sub-list for method output_type
 	0, // [0:1] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
@@ -141,26 +140,27 @@ var file_proto_game_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for field type_name
 }
 
-func init() { file_proto_game_proto_init() }
-func file_proto_game_proto_init() {
-	if File_proto_game_proto != nil {
+func init() { file_proto_v1_game_proto_init() }
+func file_proto_v1_game_proto_init() {
+	if File_proto_v1_game_proto != nil {
 		return
 	}
+	file_proto_v1_options_proto_init()
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: unsafe.Slice(unsafe.StringData(file_proto_game_proto_rawDesc), len(file_proto_game_proto_rawDesc)),
+			RawDescriptor: unsafe.Slice(unsafe.StringData(file_proto_v1_game_proto_rawDesc), len(file_proto_v1_game_proto_rawDesc)),
 			NumEnums:      0,
 			NumMessages:   2,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
-		GoTypes:           file_proto_game_proto_goTypes,
-		DependencyIndexes: file_proto_game_proto_depIdxs,
-		MessageInfos:      file_proto_game_proto_msgTypes,
+		GoTypes:           file_proto_v1_game_proto_goTypes,
+		DependencyIndexes: file_proto_v1_game_proto_depIdxs,
+		MessageInfos:      file_proto_v1_game_proto_msgTypes,
 	}.Build()
-	File_proto_game_proto = out.File
-	file_proto_game_proto_goTypes = nil
-	file_proto_game_proto_depIdxs = nil
+	File_proto_v1_game_proto = out.File
+	file_proto_v1_game_proto_goTypes = nil
+	file_proto_v1_game_proto_depIdxs = nil
 }
